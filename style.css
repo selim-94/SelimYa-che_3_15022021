@@ -1,0 +1,252 @@
+body {
+  margin: 0;
+  font-family: roboto;
+}
+
+.logo {
+  width: 100%;
+  text-align: center;
+  background-color: white;
+}
+
+.logo img {
+  width: 50%;
+}
+
+header {
+  background-color: #f6f6f6;
+}
+
+.recherche {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px grey none;
+  background: #eaeaea;
+  font-weight: bold;
+  height: 40px;
+}
+.recherche .fas {
+  margin-right: 1rem;
+}
+
+.presentation {
+  text-align: center;
+  padding-bottom: 12%;
+}
+.presentation p {
+  font-size: 1.7em;
+  font-weight: bolder;
+}
+.presentation span {
+  font-size: 1.1em;
+}
+.presentation .bouton_explor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px #9356dc solid;
+  border-radius: 50px;
+  margin: auto;
+  width: 50%;
+  background-color: #9356dc;
+  height: 40px;
+  margin-top: 10%;
+}
+.presentation .bouton_explor a {
+  color: white;
+  text-decoration: none;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+}
+.fonctionnement h1 {
+  padding-left: 7%;
+}
+.fonctionnement .choix {
+  display: flex;
+  align-items: center;
+  border: 1px solid #f6f6f6;
+  height: 60px;
+  width: 80%;
+  background-color: #f6f6f6;
+  margin: auto;
+  border-radius: 15px 15px 15px 15px;
+  margin-bottom: 5%;
+}
+.fonctionnement .choix p {
+  margin-left: 10%;
+  font-weight: bold;
+}
+.fonctionnement .choix .fas {
+  margin-left: 10%;
+}
+.fonctionnement .choix .cercle {
+  width: 20px;
+  height: 20px;
+  border-radius: 40px;
+  background: #9356dc;
+  border: 1px solid #9356dc;
+  text-align: center;
+  align-self: center;
+  color: white;
+  margin-left: -10px;
+}
+
+.compo {
+  display: flex;
+  align-items: center;
+  border: 1px solid #f6f6f6;
+  height: 60px;
+  width: 80%;
+  background-color: #f6f6f6;
+  margin: auto;
+  border-radius: 15px 15px 15px 15px;
+  margin-bottom: 5%;
+}
+.compo p {
+  margin-left: 10%;
+  font-weight: bold;
+}
+.compo .fas {
+  margin-left: 10%;
+}
+.compo .cercle {
+  width: 20px;
+  height: 20px;
+  border-radius: 40px;
+  background: #9356dc;
+  border: 1px solid #9356dc;
+  text-align: center;
+  align-self: center;
+  color: white;
+  margin-left: -10px;
+}
+
+.degustez {
+  display: flex;
+  align-items: center;
+  border: 1px solid #f6f6f6;
+  height: 60px;
+  width: 80%;
+  background-color: #f6f6f6;
+  margin: auto;
+  border-radius: 15px 15px 15px 15px;
+  margin-bottom: 5%;
+}
+.degustez p {
+  margin-left: 10%;
+  font-weight: bold;
+}
+.degustez .fas {
+  margin-left: 10%;
+  color: #9356dc;
+}
+.degustez .cercle {
+  width: 20px;
+  height: 20px;
+  border-radius: 40px;
+  background: #9356dc;
+  border: 1px solid #9356dc;
+  text-align: center;
+  align-self: center;
+  color: white;
+  margin-left: -10px;
+}
+
+#restaurants {
+  padding: 5%;
+  background-color: #f6f6f6;
+}
+#restaurants figure {
+  width: 100%;
+  background-color: white;
+  margin: 0;
+  border-radius: 20px;
+  margin-bottom: 5%;
+}
+#restaurants figure img {
+  width: 100%;
+  height: 200px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.figs a {
+  text-decoration: none;
+  color: black;
+}
+.figs a .like {
+  display: flex;
+  width: 20%;
+  padding: 7%;
+  padding-left: 19%;
+}
+.figs a .like .far {
+  font-size: 1.6em;
+}
+
+figcaption {
+  display: flex;
+}
+figcaption p {
+  margin-bottom: 1%;
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+.nom_restau {
+  width: 80%;
+}
+
+footer {
+  background-color: #353535;
+  padding: 5%;
+}
+
+.logo_foot {
+  font-family: shrikhand;
+  color: white;
+  margin-bottom: 5%;
+}
+
+.prop {
+  color: white;
+  margin-bottom: -7%;
+  display: flex;
+  align-items: baseline;
+}
+.prop .fas {
+  margin-right: 3%;
+}
+.prop .fas p {
+  font-weight: bolder;
+}
+
+.part {
+  color: white;
+  margin-bottom: -7%;
+  display: flex;
+  align-items: baseline;
+}
+.part .fas {
+  margin-right: 3%;
+}
+.part .fas p {
+  font-weight: bolder;
+}
+
+.mentions {
+  color: white;
+  margin-bottom: -2%;
+}
+
+.contact a {
+  text-decoration: none;
+  color: white;
+  margin-bottom: 5%;
+  font-family: roboto;
+}
+
+/*# sourceMappingURL=style.css.map */
