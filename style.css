@@ -1,22 +1,30 @@
+@charset "UTF-8";
+/*body*/
 body {
   margin: 0;
   font-family: roboto;
 }
 
+/*position logo*/
 .logo {
   width: 100%;
   text-align: center;
   background-color: white;
+  margin-top: 2%;
+  padding-bottom: 2%;
 }
 
+/*tail logo*/
 .logo img {
   width: 50%;
 }
 
+/*couleur de fond header*/
 header {
   background-color: #f6f6f6;
 }
 
+/*partie recherche*/
 .recherche {
   display: flex;
   justify-content: center;
@@ -25,14 +33,19 @@ header {
   background: #eaeaea;
   font-weight: bold;
   height: 40px;
+  /*icone géolocalisation*/
 }
 .recherche .fas {
   margin-right: 1rem;
 }
 
+/*partie presentation appli*/
 .presentation {
   text-align: center;
   padding-bottom: 12%;
+  /*texte presentation appli*/
+  /*texte presentation appli*/
+  /*bouton exploration*/
 }
 .presentation p {
   font-size: 1.7em;
@@ -48,19 +61,68 @@ header {
   border: 1px #9356dc solid;
   border-radius: 50px;
   margin: auto;
-  width: 50%;
-  background: linear-gradient(to bottom right, #ec73da, #9e5adc);
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
   height: 40px;
   margin-top: 10%;
-}
-.presentation .bouton_explor a {
-  color: white;
+  box-shadow: 0px 5px 14px 0px #555;
   text-decoration: none;
+  color: white;
+  width: 200px;
+  /*bouton exploration au survol*/
+}
+.presentation .bouton_explor:hover {
+  background: linear-gradient(to bottom right, #ff93e1, #a16be0);
+  box-shadow: 0px 5px 8px 2px #000;
 }
 
+.spinner {
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fondu 3s linear forwards;
+}
+
+@keyframes fondu {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+/*loading spinner*/
+.load {
+  border: 16px solid #99e2d0;
+  border-top: 16px solid #9356dc;
+  border-radius: 50%;
+  width: 340px;
+  height: 340px;
+  animation: spin 3s linear;
+  animation-fill-mode: forwards;
+}
+
+/*animation loading spinner*/
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+/*partie fonctionnement appli*/
 .fonctionnement {
   display: flex;
   flex-direction: column;
+  /*titre fonctionnement appli*/
+  /*partie choix*/
 }
 .fonctionnement h1 {
   padding-left: 7%;
@@ -75,6 +137,9 @@ header {
   margin: auto;
   border-radius: 15px 15px 15px 15px;
   margin-bottom: 5%;
+  /*texte choix*/
+  /*icone telephone mobile*/
+  /*cercle 1*/
 }
 .fonctionnement .choix p {
   margin-left: 10%;
@@ -95,6 +160,7 @@ header {
   margin-left: -10px;
 }
 
+/*partie composition*/
 .compo {
   display: flex;
   align-items: center;
@@ -105,6 +171,9 @@ header {
   margin: auto;
   border-radius: 15px 15px 15px 15px;
   margin-bottom: 5%;
+  /*texte composition*/
+  /*icone menu*/
+  /*cercle 2*/
 }
 .compo p {
   margin-left: 10%;
@@ -125,6 +194,7 @@ header {
   margin-left: -10px;
 }
 
+/*partie degustation*/
 .degustez {
   display: flex;
   align-items: center;
@@ -135,6 +205,9 @@ header {
   margin: auto;
   border-radius: 15px 15px 15px 15px;
   margin-bottom: 5%;
+  /*texte degstation*/
+  /*icone boutique*/
+  /*cercle 3*/
 }
 .degustez p {
   margin-left: 10%;
@@ -156,9 +229,11 @@ header {
   margin-left: -10px;
 }
 
+/*partie restaurants*/
 #restaurants {
   padding: 5%;
   background-color: #f6f6f6;
+  /*figures restaurants*/
 }
 #restaurants figure {
   width: 100%;
@@ -166,6 +241,8 @@ header {
   margin: 0;
   border-radius: 20px;
   margin-bottom: 5%;
+  position: relative;
+  /*images restaurants*/
 }
 #restaurants figure img {
   width: 100%;
@@ -173,6 +250,7 @@ header {
   border-radius: 20px 20px 0px 0px;
 }
 
+/*cadre nouveaux restaurants*/
 .nouveau {
   border: 2px solid #99e2d0;
   font-weight: bold;
@@ -180,27 +258,54 @@ header {
   width: fit-content;
   padding: 2%;
   color: #278870;
-  position: relative;
-  bottom: 190px;
-  left: 250px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
 }
 
+/*lien images*/
 .figs a {
   text-decoration: none;
   color: black;
-}
-.figs a .like {
-  display: flex;
-  width: 20%;
-  padding: 7%;
-  padding-left: 19%;
-}
-.figs a .like .far {
-  font-size: 1.6em;
+  width: 80%;
 }
 
+/*like interactifs*/
+.like {
+  display: flex;
+  width: 5%;
+  align-self: center;
+  /*icone coeur vide*/
+}
+.like .far {
+  font-size: 1.6em;
+  /*icone coeur vide au survol*/
+}
+.like .far:hover {
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.5s 0s ease;
+}
+
+/*icone coeur plein*/
+.like .fas {
+  font-size: 1.6em;
+  opacity: 0;
+  /*icone coeur plein au survol*/
+}
+.like .fas:hover {
+  color: #9356dc;
+  opacity: 1;
+  transition: 0.5s 0s ease;
+  z-index: 100;
+  position: absolute;
+}
+
+/*legende figures*/
 figcaption {
   display: flex;
+  /*texte figures*/
 }
 figcaption p {
   margin-bottom: 1%;
@@ -208,57 +313,120 @@ figcaption p {
   font-weight: bolder;
 }
 
+/*noms restaurants*/
 .nom_restau {
   width: 80%;
+  padding-bottom: 4%;
+  padding-left: 5%;
 }
 
+/*footer*/
 footer {
   background-color: #353535;
   padding: 5%;
 }
 
+/*logo footer*/
 .logo_foot {
   font-family: shrikhand;
   color: white;
   margin-bottom: 5%;
 }
 
+/*partie proposition*/
 .prop {
   color: white;
   margin-bottom: -7%;
   display: flex;
   align-items: baseline;
+  /*icone couverts*/
 }
 .prop .fas {
   margin-right: 3%;
+  /*texte proposition*/
 }
 .prop .fas p {
   font-weight: bolder;
 }
 
+/*partie partenaire*/
 .part {
   color: white;
   margin-bottom: -7%;
   display: flex;
   align-items: baseline;
+  /*icone mains*/
 }
 .part .fas {
   margin-right: 3%;
+  /*texte partenaires*/
 }
 .part .fas p {
   font-weight: bolder;
 }
 
+/*partie mention légales*/
 .mentions {
   color: white;
   margin-bottom: -2%;
 }
 
+/*lien mail*/
 .contact a {
   text-decoration: none;
   color: white;
   margin-bottom: 5%;
   font-family: roboto;
+}
+
+@media screen and (min-width: 1000px) {
+  #restaurants h2 {
+    margin-left: 40%;
+    margin-bottom: 10%;
+    font-size: 3em;
+  }
+
+  #restaurants figure img {
+    object-fit: cover;
+  }
+
+  .figs {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .fonctionnement h1 {
+    font-size: 3em;
+    margin-left: 30%;
+  }
+
+  .fonctionnement .choix, .compo, .degustez {
+    width: 50%;
+  }
+
+  .logo_foot {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .element_footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .prop {
+    width: 20%;
+  }
+
+  .part {
+    width: 20%;
+  }
+
+  .contact {
+    padding-top: 1.5%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

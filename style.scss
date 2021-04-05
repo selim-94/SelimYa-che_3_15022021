@@ -1,0 +1,404 @@
+$primaire:#9356dc;
+$secondaire: #ff79da;
+$tertiaire: #99e2d0;
+/*body*/
+body{
+    margin: 0;
+    font-family: roboto;
+}
+/*position logo*/
+.logo{
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    margin-top: 2%;
+    padding-bottom: 2%;
+}
+/*tail logo*/
+.logo img{
+    width: 50%;
+}
+/*couleur de fond header*/
+header{
+    background-color:#f6f6f6;
+}
+/*partie recherche*/
+.recherche{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px grey none;
+    background: #eaeaea;
+    font-weight: bold;
+    height: 40px;
+    /*icone géolocalisation*/
+    .fas{
+        margin-right: 1rem;
+    }
+}
+/*partie presentation appli*/
+.presentation{
+    text-align: center;
+    padding-bottom: 12%;
+    /*texte presentation appli*/
+    p{
+        font-size: 1.7em;
+        font-weight: bolder;
+    }
+        /*texte presentation appli*/
+        span{
+            font-size: 1.1em;
+        }
+            /*bouton exploration*/
+            .bouton_explor{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px $primaire solid;
+                border-radius: 50px;
+                margin: auto;
+                background : linear-gradient(to bottom right, $secondaire, $primaire);
+                height: 40px;
+                margin-top: 10%;
+                box-shadow: 0px 5px 14px 0px #555;
+                text-decoration: none;
+                color: white;
+                width: 200px;
+                /*bouton exploration au survol*/
+                    &:hover{
+                        background: linear-gradient(to bottom right, lighten($secondaire, 5), lighten($primaire, 5));
+                        box-shadow: 0px 5px 8px 2px #000;
+                    }
+            }
+}
+.spinner{
+   height: 100vh;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fondu 3s linear forwards;
+}
+@keyframes fondu{
+    0%{
+        opacity: 1;
+        z-index: 1;
+        
+    }
+    100%{
+        opacity: 0;
+        z-index: -1;
+    }
+}
+/*loading spinner*/
+.load{
+    border: 16px solid $tertiaire;
+    border-top: 16px solid $primaire;
+    border-radius: 50%;
+    width: 340px;
+    height: 340px;
+    animation: spin 3s linear ;
+    animation-fill-mode: forwards;
+}
+/*animation loading spinner*/
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
+/*partie fonctionnement appli*/
+.fonctionnement{
+    display: flex;
+    flex-direction: column;
+    /*titre fonctionnement appli*/
+    h1{
+        padding-left: 7%;
+    }
+        /*partie choix*/
+        .choix{
+            display: flex;
+            align-items: center;
+            border: 1px solid #f6f6f6;
+            height: 60px;
+            width: 80%;
+            background-color: #f6f6f6;
+            margin: auto;
+            border-radius: 15px 15px 15px 15px;
+            margin-bottom: 5%;
+            /*texte choix*/
+            p{
+                margin-left: 10%;
+                font-weight: bold;
+            }
+                /*icone telephone mobile*/
+                .fas{
+                    margin-left: 10%;
+                }
+                    /*cercle 1*/
+                    .cercle{
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 40px;
+                        background: $primaire;
+                        border: 1px solid $primaire;
+                        text-align: center;
+                        align-self: center;
+                        color: white;
+                        margin-left: -10px;
+                    }
+        
+        }
+    }
+    /*partie composition*/
+    .compo{
+        display: flex;
+        align-items: center;
+        border: 1px solid #f6f6f6;
+        height: 60px;
+        width: 80%;
+        background-color: #f6f6f6;
+        margin: auto;
+        border-radius: 15px 15px 15px 15px;
+        margin-bottom: 5%;
+        /*texte composition*/
+        p{
+            margin-left: 10%;
+            font-weight: bold;
+        }
+            /*icone menu*/
+            .fas{
+                margin-left: 10%;
+            }
+                /*cercle 2*/
+                .cercle{
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 40px;
+                    background: $primaire;
+                    border: 1px solid $primaire;
+                    text-align: center;
+                    align-self: center;
+                    color: white;
+                    margin-left: -10px;
+            }
+    }
+    /*partie degustation*/
+    .degustez{
+        display: flex;
+        align-items: center;
+        border: 1px solid #f6f6f6;
+        height: 60px;
+        width: 80%;
+        background-color: #f6f6f6;
+        margin: auto;
+        border-radius: 15px 15px 15px 15px;
+        margin-bottom: 5%;
+        /*texte degstation*/
+        p{
+            margin-left: 10%;
+            font-weight: bold;
+        }
+            /*icone boutique*/
+            .fas{
+                margin-left: 10%;
+                color: $primaire;
+            }
+                /*cercle 3*/
+                .cercle{
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 40px;
+                    background: $primaire;
+                    border: 1px solid $primaire;
+                    text-align: center;
+                    align-self: center;
+                    color: white;
+                    margin-left: -10px;
+                }
+    }
+/*partie restaurants*/
+#restaurants{
+    padding: 5%;
+    background-color: #f6f6f6;
+    /*figures restaurants*/
+    figure{
+        width: 100%;
+        background-color: white;
+        margin: 0;
+        border-radius: 20px;
+        margin-bottom: 5%;
+        position: relative;
+        /*images restaurants*/
+        img{
+            width: 100%;
+            height: 200px;
+            border-radius: 20px 20px 0px 0px;
+        }
+    }
+}
+/*cadre nouveaux restaurants*/
+.nouveau{
+    border: 2px solid $tertiaire;
+    font-weight: bold;
+    background-color: $tertiaire;
+    width: fit-content;
+    padding: 2%;
+    color: darken($color: $tertiaire, $amount: 40%);
+    position: absolute;
+    top: 5%;
+    right: 5%;
+
+}
+/*lien images*/
+.figs a{
+    text-decoration: none;
+    color: black;  
+    width: 80%;
+}
+/*like interactifs*/
+.like{
+    display: flex;
+    width: 5%;
+    align-self: center;
+    /*icone coeur vide*/
+    .far{
+        font-size: 1.6em; 
+        /*icone coeur vide au survol*/
+        &:hover {
+            cursor: pointer;
+            overflow: hidden;
+            opacity: 0;
+            transition: 0.5s 0s ease;
+          }
+    }
+}
+/*icone coeur plein*/
+.like .fas {
+    font-size: 1.6em;
+    opacity: 0;
+    /*icone coeur plein au survol*/
+    &:hover {
+      color: $primaire;
+      opacity: 1;
+      transition: 0.5s 0s ease;
+      z-index: 100;
+      position: absolute;
+    }
+  }
+/*legende figures*/
+figcaption {
+    display: flex;
+    /*texte figures*/
+        p{
+            margin-bottom: 1%;
+            font-size: 1.5em;
+            font-weight: bolder;
+    }
+}
+/*noms restaurants*/
+.nom_restau{
+    width: 80%;
+    padding-bottom: 4%;
+    padding-left: 5%;
+}
+/*footer*/
+footer{
+    background-color: #353535;
+    padding : 5%;
+}
+/*logo footer*/
+.logo_foot{
+    font-family: shrikhand;
+    color: white;
+    margin-bottom: 5%;
+}
+/*partie proposition*/
+.prop{
+    color: white;
+    margin-bottom: -7%;
+    display: flex;
+    align-items:baseline;
+    /*icone couverts*/
+    .fas{
+        margin-right: 3%;
+        /*texte proposition*/
+        p{
+            font-weight: bolder;
+        }
+    }
+}
+/*partie partenaire*/
+.part{
+    color: white;
+    margin-bottom: -7%;
+    display: flex;
+    align-items:baseline;
+    /*icone mains*/
+    .fas{
+        margin-right: 3%;
+        /*texte partenaires*/
+        p{
+            font-weight: bolder;
+        }
+    }
+}
+/*partie mention légales*/
+.mentions{
+    color: white;
+    margin-bottom: -2%;
+}
+/*lien mail*/
+.contact a{
+    text-decoration: none;
+    color: white;
+    margin-bottom: 5%;
+    font-family: roboto;
+}
+
+@media screen and (min-width: 1000px){
+    #restaurants h2{
+        margin-left: 40%;
+        margin-bottom: 10%;
+        font-size: 3em;
+    }
+    #restaurants figure img{
+        object-fit: cover;
+    }
+    .figs{
+        width: 50%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .fonctionnement h1{
+        font-size: 3em;
+        margin-left: 30%;
+    }
+    .fonctionnement .choix, .compo, .degustez{
+        width: 50%;
+    }
+    .logo_foot{
+        font-size: 2em;
+        text-align: center;
+    }
+    .element_footer{
+        display: flex;
+        justify-content: space-between;
+    }
+    .prop{
+        width: 20%;
+    }
+    .part{
+        width: 20%;
+    }
+    .contact{
+        padding-top: 1.5%
+    }
+
+}

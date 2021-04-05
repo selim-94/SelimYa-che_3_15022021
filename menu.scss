@@ -1,0 +1,341 @@
+$primaire:#9356dc;
+$secondaire: #ff79da;
+$tertiaire: #99e2d0;
+/*body*/
+body{
+    font-family: roboto;
+    margin: 0;
+}
+/*titres*/
+h1{
+    font-family: shrikhand;
+}
+/*positionnement logo menus*/
+.logo{
+    margin-bottom: 2%;
+    background-color: white;
+    padding-top: 3%;
+    /*positionnement icone flêche*/
+    .fas{
+        vertical-align: 55%;
+        margin-right: 10%;
+        padding-left: 8%;
+        color: black;
+        
+    }
+}
+/*icone fleche lien menu principal*/
+.logo a{
+    text-decoration: none;
+}
+/*positionnement logo*/
+.logo img{
+        margin-right: 15%;
+        width: 50%;
+}
+/*taille photos*/
+.photo img{
+    width: 100%;
+    height: 200px;
+}
+/*details photo palette*/
+.photo{
+    height: 225px;
+    background-image: url("images/restaurants/palette.jpg");
+    background-size: cover;
+}
+/*details photo note*/
+.photo_note{
+    height: 250px;
+    background-image: url("images/restaurants/note3.jpg");
+    background-size: cover;
+}
+/*details photo délice*/
+.photo_delice{
+    height: 235px;
+    background-image: url("images/restaurants/delice.jpg");
+    background-size: cover;
+}
+/*details photo à la française*/
+.photo_francaise{
+    height: 240px;
+    background-image: url("images/restaurants/france.jpg");
+    background-size: cover;
+}
+/*détails section*/
+section{
+    padding-left: 5%;
+    background-color: #f6f6f6;
+    padding-bottom: 2%;
+    border-radius: 30px 30px 0px 0px;
+    margin-top: -8%;
+}
+/*partie entête*/
+.entete{
+    display: flex;
+    /*titre entête*/
+    h1{
+        font-family: shrikhand;
+        width: 80%;
+        }
+}
+/*icone coeur entête*/
+.far{
+    font-size: 1.5em;
+    padding: 7%;
+}
+/*partie menu*/
+.nourriture{
+    margin-right: 5%;
+}
+/*categorie nourriture*/
+.cat{
+    border-bottom: 2px solid $tertiaire;
+    width: 40px;
+    padding-bottom: 3px;
+    margin-bottom: 5%;
+}
+.box{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 2%;
+}
+
+/*option menu*/
+.choix{
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: wrap;
+    margin-bottom: 5%;
+    padding-left: 2%;
+    box-shadow: 0px 3px 4px 2px #dddddd;
+    &:hover{
+        .check{
+          width: 20%;
+          transition: 0.2s ease;
+        }
+        .box{
+          width: 80%;
+          transition: 0.2s ease;
+        }
+        i{
+          transform: rotate(360deg);
+          transition: 0.5s ease;
+        }
+      }
+    
+    /*nom des plats*/
+    p{
+        width: 85%;
+        font-weight: bold;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+/*description des plats*/
+.choix span{
+        width: 85%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+}
+/*prix des plats*/
+.prix{
+    width: 15%;
+    font-weight: bold;
+}
+.check {
+    border-radius: 0px 15px 15px 0px;
+    background-color: $tertiaire;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0%;
+    overflow: hidden;
+      &:hover {
+        border-radius: 0px 15px 15px 0px;
+        background-color: $tertiaire;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        opacity: 1;
+    }
+  }
+  
+  .check .far{
+    font-size: 1.5em;
+  }
+/*bouton de commande*/
+.bout_com{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px $primaire solid;
+    border-radius: 50px;
+    margin: auto;
+    width: 60%;
+    background: linear-gradient(to bottom right, $secondaire, $primaire);
+    height: 50px;
+    margin-top: 10%;
+    color: white;
+    margin-bottom: 15%;
+    box-shadow: 0px 5px 14px 0px #555;
+    /*bouton de commande au survol*/
+    &:hover{
+        background: linear-gradient(to bottom right, lighten($secondaire, 5), lighten($primaire, 5));
+        box-shadow: 0px 5px 8px 2px #000;
+    }
+}
+/*footer*/
+footer{
+    background-color: #353535;
+    padding : 5%;
+}
+/*logo footer*/
+.logo_foot{
+    font-family: shrikhand;
+    color: white;
+    margin-bottom: 5%;
+}
+/*partie proposition*/
+.prop{
+    color: white;
+    margin-bottom: -7%;
+    display: flex;
+    align-items:baseline;
+    /*icone couverts*/
+    .fas{
+        margin-right: 3%;
+        /*texte proposition*/
+        p{
+            font-weight: bolder;
+        }
+    }
+}
+/*partie partenaires*/
+.part{
+    color: white;
+    margin-bottom: -7%;
+    display: flex;
+    align-items:baseline;
+    /*icone mains*/
+    .fas{
+        margin-right: 3%;
+        /*texte partenaires*/
+        p{
+            font-weight: bolder;
+        }
+    }
+}
+/*partie mention légales*/
+.mentions{
+    color: white;
+    margin-bottom: -2%;
+}
+/*lien mail*/
+.contact a{
+    text-decoration: none;
+    color: white;
+    margin-bottom: 5%;
+    font-family: roboto;
+}
+
+@media screen and (min-width: 1000px){
+    .logo{
+        text-align: center;
+    }
+    .logo a{
+        vertical-align: 100%;
+        font-size: 1.5em;
+    }
+    .photo_delice{
+        height: 370px;
+        background-image: url("images/restaurants/delice.jpg");
+        background-size: cover;
+        width: 50%;
+        margin-left: 27%;
+        margin-bottom: 2%;
+    }
+    .photo_francaise{
+        height: 370px;
+        background-image: url("images/restaurants/france.jpg");
+        background-size: cover;
+        width: 50%;
+        margin-left: 27%;
+        margin-bottom: 2%;
+    }
+    .photo_note{
+        height: 370px;
+        background-image: url("images/restaurants/note3.jpg");
+        background-size: cover;
+        width: 50%;
+        margin-left: 27%;
+        margin-bottom: 2%;
+    }
+    .photo{
+        height: 370px;
+        background-image: url("images/restaurants/palette.jpg");
+        background-size: cover;
+        width: 50%;
+        margin-left: 27%;
+        margin-bottom: 2%;
+    }
+    section{
+        padding-left: 5%;
+        background-color: #f6f6f6;
+        padding-bottom: 2%;
+        margin-top: 0;
+
+    }
+    .entete{
+        padding-top: 5%;
+        padding-left: 0;
+        justify-content: center;
+        margin-bottom: 5%;
+    }
+    .entete h1{
+        margin-right: 3%;
+        margin-left: 35%;
+    }
+    .entete .far{
+        margin-right: 35%;
+        align-self: center;
+        padding: 0px;
+    }
+    .cat{
+        margin: auto;
+        margin-bottom: 5%;
+        border-bottom: none;
+    }
+    .choix{
+        width: 50%;
+        margin-left: 25%;
+    }
+    .bout_com{
+        width: 35%;
+        height: 60px;
+    }
+    .logo_foot{
+        font-size: 2em;
+        text-align: center;
+    }
+    .element_footer{
+        display: flex;
+        justify-content: space-between;
+    }
+    .prop{
+        width: 20%;
+    }
+    .part{
+        width: 20%;
+    }
+    .contact{
+        padding-top: 1.5%
+    }
+}
