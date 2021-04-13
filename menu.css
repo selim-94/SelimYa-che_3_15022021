@@ -88,10 +88,36 @@ section {
   width: 80%;
 }
 
-/*icone coeur entête*/
-.far {
-  font-size: 1.5em;
-  padding: 7%;
+/*like interactifs*/
+.like {
+  display: flex;
+  width: 5%;
+  align-self: center;
+  /*icone coeur vide*/
+}
+.like .far {
+  font-size: 1.6em;
+  /*icone coeur vide au survol*/
+}
+.like .far:hover {
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.5s 0s ease;
+}
+
+/*icone coeur plein*/
+.like .fas {
+  font-size: 1.6em;
+  opacity: 0;
+  /*icone coeur plein au survol*/
+}
+.like .fas:hover {
+  color: #9356dc;
+  opacity: 1;
+  transition: 0.5s 0s ease;
+  z-index: 100;
+  position: absolute;
 }
 
 /*partie menu*/
@@ -108,8 +134,9 @@ section {
 }
 
 .entree {
-  animation: fadein 1s;
+  animation: fadein 0.8s;
   animation-fill-mode: backwards;
+  animation-delay: 0.5s;
 }
 
 @keyframes fadein {
@@ -121,8 +148,9 @@ section {
   }
 }
 .plats {
-  animation: fadein 1.5s;
+  animation: fadein 0.8s;
   animation-fill-mode: backwards;
+  animation-delay: 0.8s;
 }
 
 @keyframes fadein {
@@ -134,8 +162,9 @@ section {
   }
 }
 .desserts {
-  animation: fadein 2s;
+  animation: fadein 0.8s;
   animation-fill-mode: backwards;
+  animation-delay: 1s;
 }
 
 @keyframes fadein {
@@ -369,10 +398,9 @@ footer {
     margin-left: 35%;
   }
 
-  .entete .far {
-    margin-right: 35%;
-    align-self: center;
-    padding: 0px;
+  .like {
+    margin-right: 30%;
+    width: 1%;
   }
 
   .cat {
